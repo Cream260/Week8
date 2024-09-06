@@ -7,7 +7,7 @@ export class MathController {
   private logger = new Logger('MathController');
   constructor(private readonly mathservice: MathService) {}
   @Post('sum')
-  sum(@Body('numbers') numbers: number[]): number {
+  sum1(@Body('numbers') numbers: number[]): number {
     this.logger.log('sum' + numbers);
     return this.mathservice.accumulate(numbers);
   }
